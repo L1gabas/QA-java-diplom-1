@@ -8,7 +8,7 @@ import praktikum.Burger;
 import praktikum.Ingredient;
 import praktikum.IngredientType;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
@@ -19,7 +19,7 @@ public class BurgerTest {
     private Bun bunBlue;
 
     @Mock
-    private Ingredient thousandIslandsSauce, fireAssSauce, fillingTomato, fillingSalad;
+    private Ingredient thousandIslandsSauce, fireAssSauce, fillingTomato;
 
     @Before
     public void setUp() {
@@ -38,7 +38,7 @@ public class BurgerTest {
     @Test
     public void addIngredientTOBurger() {
         burger.addIngredient(thousandIslandsSauce);
-        assertEquals(true, burger.ingredients.contains(thousandIslandsSauce));
+        assertTrue(burger.ingredients.contains(thousandIslandsSauce));
     }
     @Test
     public void removeIngredientFromBurger() {
@@ -48,7 +48,7 @@ public class BurgerTest {
 
         burger.removeIngredient(0);
 
-        assertEquals(false, burger.ingredients.contains(thousandIslandsSauce));
+        assertFalse(burger.ingredients.contains(thousandIslandsSauce));
     }
 
     @Test
