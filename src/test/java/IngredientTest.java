@@ -17,6 +17,6 @@ public class IngredientTest {
     }
     @Test
     public void sauceReturnSaucePrice() {
-        assertEquals(100, bbq.getPrice(), 10);
+        assertEquals(100, bbq.getPrice(), 0);
     }
 }

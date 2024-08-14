@@ -33,6 +33,6 @@ public class BunParamTest {
 
     @Test
     public void priceReturnPrice() {
-        assertEquals(200, bun.getPrice(), 0.5);
+        assertEquals(200, bun.getPrice(), 0);
     }
 }
